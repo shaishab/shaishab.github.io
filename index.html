@@ -87,7 +87,7 @@
                 <h2 class="d-block d-sm-none mb-0">
                   <span class="text-primary">Shaishab Roy</span>
                 </h2>
-                <div class="subheading">Software Engineer at Brain Station 23 Ltd.</div>
+                <div class="subheading">Sr. Software Engineer at Brain Station 23 Ltd.</div>
                 <div class="subheading">Mohakhali, Dhaka, Bangladesh.</div>
                 <div class="subheading">
                   <a href="mailto:shaishab.cse@gmail.com">shaishab.cse@gmail.com</a>
@@ -162,7 +162,7 @@
           <h2 class="mb-5">Career Summary</h2>
           <ul>
             <li class="mb-2">
-                Software Developer with 4+ years of industry experience. Delivers efficient and reliable 
+                Software Developer with <span id="experience">5+</span> years of industry experience. Delivers efficient and reliable 
                 solutions and excels in building/leading teams in high-pressure environments.
             </li>
             <li class="mb-2">
@@ -195,6 +195,20 @@
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
         <div class="my-auto">
           <h2 class="mb-5">Experience</h2>
+		  
+		  <div class="resume-item d-flex flex-column flex-md-row mb-4">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Sr. Software Engineer</h3>
+              <div class="subheading mb-2">
+                Brain Station-23 Ltd
+                <a target="_blank" href="http://www.brainstation-23.com"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+              </div>
+              <p>8th floor, Plot#2, Bir Uttam AK Khandakar Road, Mohakhali C/A, Dhaka-1212, Bangladesh.</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">January, 2019 – Present</span>
+            </div>
+          </div>
 
           <div class="resume-item d-flex flex-column flex-md-row mb-4">
             <div class="resume-content mr-auto">
@@ -206,7 +220,7 @@
               <p>8th floor, Plot#2, Bir Uttam AK Khandakar Road, Mohakhali C/A, Dhaka-1212, Bangladesh.</p>
             </div>
             <div class="resume-date text-md-right">
-              <span class="text-primary">November, 2015 – Present</span>
+              <span class="text-primary">November, 2015 – December, 2018</span>
             </div>
           </div>
 
@@ -232,10 +246,11 @@
           <div class="resume-item d-flex flex-column flex-md-row mb-4">
             <div class="resume-content mr-auto">
               <h3 class="mb-0">
-                Meed <a target="_blank" href="https://meed.net/"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+                Meed <a target="_blank" href="https://meedbankingclub.com/"><i class="fa fa-external-link-square" aria-hidden="true"></i></a>
               </h3>
               <p>Meed is a mobile financial service that provides access to a global network of 
-                Member Banks. Through the Meed app you can manage all your essential financial requirements 
+                Member Banks. Meed Banking Club exists to help user earn more, save more and do more. 
+				Through the Meed APP, you can manage all your essential financial requirements 
                 with these banks. Meed allows users to send/receive funds to/from other Meed users. 
                 No fee domestically, no more than a 2% foreign exchange fee internationally that process 
                 called P2P transfer. Meed-exclusive program that provides an opportunity to earn a residual income stream.</p>
@@ -381,7 +396,7 @@
                     </li>
                     <li class="progress" title="60%">
                       <div class="progress-bar progress-bar-striped bg-primary font-weight-bold actual-size" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
-                        Mocha, Supertest
+                        Mocha, Supertest, Should, Chai
                       </div>
                     </li>
                     <li class="progress" title="75%">
@@ -514,7 +529,7 @@
       </section>
 
     </div>
-
+ 
     <!-- Bootstrap core JavaScript -->
     <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="//stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
@@ -524,6 +539,18 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/portfolio.min.js"></script>
+	
+	<script>
+		function calculateExperience(newDate, pastDate) {
+			var diff = Math.round(newDate.getTime() - pastDate.getTime());
+			var day = 1000 * 60 * 60 * 24;
+			var days = Math.round(diff / day);
+			return Math.round((days / 365)) + '.' + Math.round(((days % 365) / 30)) + '+';
+		}
+		var today = new Date();
+		var startJob = new Date(2014,05,19);
+		document.getElementById("experience").innerHTML =  calculateExperience(today, startJob);
+	</script>
 
   </body>
 
