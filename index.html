@@ -99,7 +99,7 @@
             </div> -->
           </div>
           <p class="mb-5">
-            &emsp; I am a full-stack web application developer and software developer with 4.5 years of experience. 
+            &emsp; I am a full-stack web application developer and software developer with <span id="experience">5+</span> years of experience. 
             Currently, I am working on <b>Node.js, Express framework, MongoDB</b>.
             My responsibility includes getting requirements from client and analysis to make 
             a better solution for each requirement and develop also take care of my teammates. 
@@ -162,7 +162,7 @@
           <h2 class="mb-5">Career Summary</h2>
           <ul>
             <li class="mb-2">
-                Software Developer with <span id="experience">5+</span> years of industry experience. Delivers efficient and reliable 
+                Software Developer with <strong><span id="experience1">5+</span> </strong>years of industry experience. Delivers efficient and reliable 
                 solutions and excels in building/leading teams in high-pressure environments.
             </li>
             <li class="mb-2">
@@ -550,6 +550,7 @@
 		var today = new Date();
 		var startJob = new Date(2014,05,19);
 		document.getElementById("experience").innerHTML =  calculateExperience(today, startJob);
+		document.getElementById("experience1").innerHTML =  calculateExperience(today, startJob);
 	</script>
 
   </body>
